@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Anuj Yadav Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Line style Demo project and arrow -->
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css">
+	<!-- OR (jsDelivr, versioned) -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.2.0/css/line.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Anuj Yadav</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png); background-position: center -50px;">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello! , It's Me</span>
+								<h1 class="mb-4 mt-3"><span>Anuj Yadav</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+									const typingAnimationElement = document.getElementById('typing-animation');
+									const typingTexts = ['Engineer', 'Frontend Developer'];
+									let currentIndex = 0;
+									let charIndex = 0;
+
+									function typeWriter() {
+										if (charIndex < typingTexts[currentIndex].length) {
+											typingAnimationElement.textContent += typingTexts[currentIndex].charAt(charIndex);
+											charIndex++;
+											setTimeout(typeWriter, 150);
+										} else {
+											setTimeout(() => {
+												typingAnimationElement.textContent = '';
+												charIndex = 0;
+												currentIndex = (currentIndex + 1) % typingTexts.length;
+												typeWriter();
+											}, 1500); // Wait before next word
+										}
+									}
+
+									typeWriter();
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Senior Developer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://www.youtube.com/@anujyadav3304"
+										class="btn btn-primary py-3 px-4">YouTube</a>
+									<a href="https://github.com/anujyadav390"
+										class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span><b>Anuj Yadav</b></span></p>
+											<p><span class="title-s">Job Role: </span> <span><b>Senior Web
+														Developer</b></span>
+											</p>
+											<p><span class="title-s">Experience: </span> <span><b>2 Years 11
+														Months</b></span>
+											</p>
+											<p><span class="title-s">Address: </span> <span><b>Mohali Punjab,
+														India</b></span>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s"><b>Skills</b></p>
+									<span>HTML</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>CSS</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Java Script</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>React</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Redux</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>Type Script</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>Node.js</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big mobile-view">About</h1>
+								<h2 class="mb-4 mobile-view">About Me</h2>
+
+								<p class="mobile-view">With over 3 years of comprehensive experience in the field of web
+									developer,
+									accompanied by a master's degree in engineering. Passionate Frontend Developer
+									specializing in React.js with strong experience in building responsive, scalable,
+									and user-friendly web applications. Seeking opportunities to contribute technical
+									expertise, problem-solving skills, and creativity to impactful projects.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Reac.js &amp; Node.js</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master of Computer Applications
+											(MCA)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Postman, VS
+											Code. , Looker &amp; Tableau</span></li>
+									<li class="d-flex"><span>Frontend:</span> <span>React.js, Redux, JavaScript (ES6+),
+											HTML5, CSS3, Bootstrap, &amp; Tailwind CSS</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>REST APIs, Excel, Git & Git Hub,
+											JIRA, UI/UX Design, Third-Party Integrations &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography,
+											Playing Cricket</span></li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/anuj-yadav-390ay/"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>With over 3 years of comprehensive experience in the field of web developer, accompanied by a
+						master's degree in engineering. Software Developer with excellent problem-solving skills and
+						ability to perform well in a team.</p>
+					<div class="underline"></div>
+				</div>
+			</div>
+			<div class="row justify-content-center mt-2">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="File/Anuj React.js.pdf" download="YourName_CV.pdf" class="btn btn-primary py-4 px-5">⬇️
+							Download CV</a></p>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+
+			<div class="row justify-content-center mt-5 pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Experience</h1>
+					<h2 class="mb-4">Experience</h2>
+					<p>Passionate Frontend Developer specializing in React.js with strong experience in building
+						responsive, scalable, and user-friendly web applications.</p>
+					<div class="underline"></div>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate experience-card">
+						<span class="date">OCT 2024 - Present</span>
+						<h2>Web Developer</h2>
+						<span class="position">Teqlis Software</span>
+						<p class="mt-4">At Teqlis Software, we believe in turning ideas into powerful digital solutions.
+							As part of the Teqlis family, I’ve seen firsthand the dedication, creativity, and innovation
+							that our team puts into every project.
+						<ul>
+							<li>Worked in team environments to produce high-quality programs and applications for
+								various industries.</li>
+							<li>Contributed to open-source projects, demonstrating commitment to the software
+								development community and collaborative innovation.</li>
+							<li>Provided training and mentorship to new trainees.</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate experience-card">
+						<span class="date">SEP 2023 - OCT 2024</span>
+						<h2>Web Developer</h2>
+						<span class="position">Cuilsoft Solutions</span>
+						<p class="mt-4">Cuilsoft Solutions is your trusted technology partner, offering end-to-end IT
+							services that transform ideas into real-world results.
+						<ul>
+							<li>Served as a standalone UI developer specializing in React, leading the entire website
+								migration.</li>
+							<li>Collaborating with multiple development teams to understand, analyse and resolve
+								client's issues.</li>
+							<li>Experience in developing and maintaining web applications using ReactJS, JavaScript,
+								HTML5, CSS3, ES6, Material Ui, Redux, Babel, Webpack, Bootstrap.</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate experience-card">
+						<span class="date">SEP 2022 - SEP 2023</span>
+						<h2>Web Developer</h2>
+						<span class="position">Ameotech Informatics</span>
+						<p class="mt-4">Ameotech Informatics is a trusted IT solutions company focused on creating
+							technology that empowers businesses to achieve more.
+						<ul>
+							<li>Developed and maintained React.js applications with clean and reusable code.</li>
+							<li>Integrated REST APIs for seamless data fetching and state management with Redux.</li>
+							<li>Collaborated with backend developers and designers to deliver user-friendly features.
+							</li>
+							<li>Implemented responsive UI ensuring compatibility across devices and browsers.</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row justify-content-center mt-5 pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Education</h1>
+					<h2 class="mb-4">Education</h2>
+					<p>Education is the most powerful weapon, which you can use to change the change the world.</p>
+					<div class="underline"></div>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate experience-card">
+						<span class="date">2015 - 2018</span>
+						<h2>Master of Computer Applications (MCA)</h2>
+						<span class="position">MMMUT, GORAKHPUR (U.P.)</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate experience-card">
+						<span class="date">2011 - 2014</span>
+						<h2>Bachelor of Computer Applications (BCA)</h2>
+						<span class="position">MDU, ROHTAK, HARYANA</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the sample web projects on ReactJs, Redux, Bootstrap, JSON, HTML, CSS, REST API & Node.
+					</p>
+					<div class="underline"></div>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://github.com/anujyadav390/-HR-Employee-Management-using-react">Smart HR
+									& Employee Management Made using React</a></h3>
+						</div>
+						<span class="work_button"><a class="demo_color" href="hr-popup">Demo
+								<i class="uil uil-arrow-right work_button-icon"></i></a>
+						</span>
+						<div class="portfolio_info-detaile">
+							<h3 class="details_title">HR & Employee Management</h3>
+							<p class="details_description">
+								Empowering businesses with seamless HR operations, employee engagement, and performance
+								management.
+							</p>
+							<ul class="details_info">
+								<li>Created - <span>4 Dec 2021</span></li>
+								<li>Technologies - <span>React.js, Node.js, HTML, CSS</span></li>
+								<li>Role - <span>Frontend & Backend</span></li>
+								<li>View - <span><a href="#">www.domain.com</a></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://github.com/anujyadav390/Smart-Chat-Board-Connect-Collaborate-Communicate">Smart
+									Chat Board – Connect, Collaborate, Communicate</a></h3>
+						</div>
+						<span class="work_button"><a class="demo_color" href="hr-popup">Demo
+								<i class="uil uil-arrow-right work_button-icon"></i></a>
+						</span>
+						<div class="portfolio_info-detaile">
+							<h3 class="details_title">Smart Chat Board – Connect</h3>
+							<p class="details_description">
+								Our Chat Board is a real-time messaging system that allows employees, HR, and teams to
+								communicate seamlessly.
+							</p>
+							<ul class="details_info">
+								<li>Created - <span>18 Nov 2022</span></li>
+								<li>Technologies - <span>React.js, Redux, HTML, CSS</span></li>
+								<li>Role - <span>Frontend & Backend</span></li>
+								<li>View - <span><a href="#">www.domain.com</a></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://github.com/anujyadav390/Sunny-Reward-Benefits-and-Sunny-Payments-">Sunny
+									Reward Benefits and Sunny Payments and Benefits projects</a></h3>
+						</div>
+						<span class="work_button"><a class="demo_color" href="hr-popup">Demo
+								<i class="uil uil-arrow-right work_button-icon"></i></a>
+						</span>
+						<div class="portfolio_info-detaile">
+							<h3 class="details_title">Sunny Reward Benefits and Sunny Payments</h3>
+							<p class="details_description">
+								Developed a health and wellness platform to promote healthier lifestyles through
+								rewards, challenges, and progress tracking.
+							</p>
+							<ul class="details_info">
+								<li>Created - <span>25 Dec 2022</span></li>
+								<li>Technologies - <span>React.js, Node.js, Redux, HTML, CSS</span></li>
+								<li>Role - <span>Frontend & Backend</span></li>
+								<li>View - <span><a href="#">www.domain.com</a></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://github.com/anujyadav390/-Implemented-real-time-data-fetching-and-dynamic-charts-html">Implemented
+									real-time data fetching and dynamic charts</a></h3>
+						</div>
+						<span class="work_button"><a class="demo_color" href="hr-popup">Demo
+								<i class="uil uil-arrow-right work_button-icon"></i></a>
+						</span>
+						<div class="portfolio_info-detaile">
+							<h3 class="details_title">Implemented real-time data fetching and dynamic charts</h3>
+							<p class="details_description">
+								Optimized performance by implementing lazy loading, API pagination, and Redux state
+								management.
+							</p>
+							<ul class="details_info">
+								<li>Created - <span>15 Feb 2023</span></li>
+								<li>Technologies - <span>React.js, HTML, CSS</span></li>
+								<li>Role - <span>Frontend & Backend</span></li>
+								<li>View - <span><a href="#">www.domain.com</a></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://github.com/anujyadav390/-Anuj-Yadav-Portfolio-with-sections">
+									Portfolio HTML/React template with sections</a></h3>
+						</div>
+						<span class="work_button"><a class="demo_color" href="hr-popup">Demo
+								<i class="uil uil-arrow-right work_button-icon"></i></a>
+						</span>
+						<div class="portfolio_info-detaile">
+							<h3 class="details_title">Portfolio HTML/React template with sections</h3>
+							<p class="details_description">
+								This content is professional, concise, and HR-friendly — perfect &amp; for my portfolio
+								website, LinkedIn, or resume.
+							</p>
+							<ul class="details_info">
+								<li>Created - <span>10 Apr 2024</span></li>
+								<li>Technologies - <span>React.js, HTML, CSS</span></li>
+								<li>Role - <span>Frontend</span></li>
+								<li>View - <span><a href="#">www.domain.com</a></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- --------Portfolio Project Popup--------- -->
+
+	<div class="popup-container" id="hr-popup-container">
+		<div class="portfolio_popup" id="hr-popup">
+			<div class="portfolio_popup-inner">
+				<span class="portfolio_popup-close">&times;</span>
+				<div class="pp_thumbnail">
+					<img src="images/proj_1.jpg" alt="Project Image" class="portfolio_popup-img">
+				</div>
+				<div class="portfolio_popup-info">
+					<div class="portfolio_popup-subtitle">Featured - <span>Design</span></div>
+					<div class="portfolio_popup-body">
+						<h3 class="details_title">HR & Employee Management</h3>
+						<p class="details_description">
+							Empowering businesses with seamless HR operations, employee engagement, and performance
+							management.
+						</p>
+						<ul class="details_info">
+							<li>Created - <span>4 Dec 2021</span></li>
+							<li>Technologies - <span>React.js, Node.js, HTML, CSS</span></li>
+							<li>Role - <span>Frontend & Backend</span></li>
+							<li>View - <span><a href="#">www.domain.com</a></span></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="05">0</strong>
+							<span>Achievements</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="10">0</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="50">0</strong>
+							<span>Mentored Students</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to solve problems and Contributed to the creation of automated scripts &amp; for
+							software build processes, enhancing efficiency and reliability </h4>
+						<br>
+						<p><a href="https://github.com/anujyadav390" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Mohali Punjab , India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+91 8005350929</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:info@yoursite.com">anujyadav390@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="File/Anuj React.js.pdf">resumelink</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- ===========================Contact Section=========================== -->
+
+
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Get In<span> Touch </span> </h2>
+					<p>I'M VERY RESPONSIVE TO MESSAGE</p>
+				</div>
+				<div class="underline"></div>
+			</div>
+			<section class="contacts" id="contact">
+				<form action="https://formspree.io/f/mblanjwo" method="POST">
+					<div class="input-box">
+						<input type="text" id="name" name="name" placeholder="Please enter your name" autocomplete="off"
+							class="form-input" required>
+						<input type="email" name="email" id="email" placeholder="xyd@gmail.com" autocomplete="off"
+							class="form-input" required>
+					</div>
+					<div class="input-box">
+						<input type="text" id="subject" name="subject" placeholder="Email Subject" autocomplete="off"
+							class="form-input" required>
+						<input type="text" id="number" name="number" placeholder="Mobile Number" autocomplete="off"
+							class="form-input" required>
+					</div>
+					<div class="input-box">
+						<textarea type="message" id="message" cols="30" name="message" placeholder="message"
+							autocomplete="off" minlength="20" class="form-textarea" required></textarea>
+					</div>
+					<br>
+					<button type="submit" class="submit-btn">Send Message</button>
+				</form>
+			</section>
+			<!-- <section class="contact" id="contact">
+				 <form class="contact-form" action="https://formspree.io/f/mblanjwo" method="POST">
+					<div class="form-group">
+						<label for="name" class="form-label">Name</label>
+						<input type="text" id="name" name="name" placeholder="Please enter your name" autocomplete="off" class="form-input" required>
+					</div>
+					<div class="form-group">
+						<label for="email" class="form-label">Email</label>
+						<input type="email" name="email" id="email" placeholder="xyd@gmail.com"  autocomplete="off" class="form-input" required>
+					</div>
+					<div class="form-group">
+						<label for="subject" class="form-label">Subject</label>
+						<input type="text" id="subject" name="subject" placeholder="subject"  autocomplete="off" class="form-input" required>
+					</div>
+					<div class="form-group">
+						<label for="number" class="form-label">Number</label>
+						<input type="number" id="number" name="number" placeholder="phone number" autocomplete="off" class="form-input" required>
+					</div>
+					<div class="form-group">
+						<label for="message" class="form-label">Message</label>
+						<textarea type="message" id="message" name="message" placeholder="message"  autocomplete="off" minlength="20" class="form-textarea" required></textarea>
+					</div>
+					<button type="submit" class="submit-btn">Send Message</button>
+				 </form>
+			  </section> -->
+			<div class="container"></div>
+			<br>
+			<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+				<li class="ftco-animate normal-txt">Find me on </li>
+				<li class="ftco-animate"><a href="https://www.youtube.com/@anujyadav3304"><span
+							class="icon-youtube"></span></a></li>
+				<li class="ftco-animate"><a href="https://www.linkedin.com/in/anuj-yadav-390ay/"><span
+							class="icon-linkedin"></span></a></li>
+				<li class="ftco-animate"><a href="https://x.com/ANUJYADAV390?t=YxWVi8wROMJC35-PFMYXLw&s=09"><span
+							class="icon-twitter"></span></a></li>
+				<li class="ftco-animate"><a href="https://www.facebook.com/anuj.appi/"><span
+							class="icon-facebook"></span></a></li>
+				<li class="ftco-animate"><a href="https://www.instagram.com/anuj_yadav_raj/"><span
+							class="icon-instagram"></span></a></li>
+			</ul>
+			<br>
+
+		</div>
+	</section>
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p>Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed <i
+							class="icon-heart color-danger" aria-hidden="true"></i> by <a href="#" target="_blank">Anuj
+							Yadav</a>
+					<div class="footer-iconTop">
+						<a class="ftco-animate" href="#home-section"><span
+								class="material-icons">arrow_circle_up</span></a>
+					</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<!-- --------Portfolio Project Popup--------- -->
+	<!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Select popup and close button
+  const popup = document.getElementById("hr-popup").closest(".popup-container");
+  const openBtn = document.querySelector('a[href="hr-popup"]');
+  const closeBtn = popup.querySelector(".portfolio_popup-close");
+
+  // Open popup
+  openBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    popup.classList.add("active");
+  });
+
+  // Close popup on button click
+  closeBtn.addEventListener("click", function() {
+    popup.classList.remove("active");
+  });
+
+  // Close popup when clicking outside
+  popup.addEventListener("click", function(e) {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+    }
+  });
+});
+</script> -->
+	<script>
+		document.addEventListener("click", (e) => {
+			// Detect click on .work_button or its child <a>
+			const button = e.target.closest(".work_button");
+			if (button) {
+				e.preventDefault(); // Stop anchor link
+				const portfolioItem = button.closest(".blog-entry");
+				openPortfolioPopup(portfolioItem);
+			}
+		});
+
+		function openPortfolioPopup(portfolioItem) {
+			// Show popup container
+			const popupContainer = document.querySelector(".popup-container");
+			popupContainer.classList.add("active");
+
+			// Copy content
+			const imgDiv = portfolioItem.querySelector(".block-20");
+			const imageUrl = imgDiv.style.backgroundImage.slice(5, -2); // remove url("...")
+
+			document.querySelector(".pp_thumbnail img").src = imageUrl;
+
+			document.querySelector(".portfolio_popup-body").innerHTML =
+				portfolioItem.querySelector(".portfolio_info-detaile").innerHTML;
+		}
+
+		// Close popup
+		document
+			.querySelector(".portfolio_popup-close")
+			.addEventListener("click", () => {
+				document.querySelector(".popup-container").classList.remove("active");
+			});
+
+		// Optional: Close popup when clicking outside
+		document.querySelector(".popup-container").addEventListener("click", (e) => {
+			if (e.target.classList.contains("popup-container")) {
+				e.target.classList.remove("active");
+			}
+		});
+	</script>
+
+	<!-- ----------------click a menu item (like Resume or Projects), the navbar should automatically close----------------------- -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+			const navbarCollapse = document.querySelector(".navbar-collapse");
+
+			navLinks.forEach(link => {
+				link.addEventListener("click", () => {
+					// Collapse menu after clicking a link (for mobile view)
+					if (navbarCollapse.classList.contains("show")) {
+						new bootstrap.Collapse(navbarCollapse).toggle();
+					}
+				});
+			});
+		});
+	</script>
+
+
+</body>
+
+</html>
